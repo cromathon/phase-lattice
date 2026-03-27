@@ -1,9 +1,4 @@
 def gray_code(n):
-    """
-    Generate traversal of R_n where
-    successive states differ by one bit
-    """
-
     if n == 0:
         return [()]
 
@@ -22,6 +17,5 @@ class Traversal:
         self.path = gray_code(n)
 
     def next_state(self, current):
-
         i = self.path.index(current)
         return self.path[(i + 1) % len(self.path)]

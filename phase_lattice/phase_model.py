@@ -1,10 +1,8 @@
 class PhaseModel:
 
     def __init__(self, traversal):
-
         self.path = traversal.path
         self.N = len(self.path)
-
         self.phase = {}
 
         for i, s in enumerate(self.path):
@@ -15,7 +13,6 @@ class PhaseModel:
         return self.phase[state]
 
     def quadrant(self, theta):
-
         theta = theta % 720
 
         if theta < 180:
